@@ -1,0 +1,38 @@
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+;
+}
+
+ul{
+    display: flex;
+    gap: 0 3.5rem;
+    align-content: center;
+}
+
+li{
+    font-weight: 400;
+    display: inline-block;
+  position: relative;
+ 
+}
+
+.Brand{
+    font-size: 24px;
+    color: #4B0082;
+    font-weight: 700;
+}
+
+.Brand:hover{
+    cursor: pointer;
+    color: #702670;
+}
+
+li:hover{
+    cursor: pointer;
+    color: #000023;
+   text-decoration: underline;
+}
+
+
