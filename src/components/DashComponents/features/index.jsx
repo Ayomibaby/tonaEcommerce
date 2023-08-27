@@ -6,7 +6,7 @@ import {BsTelephone} from "react-icons/bs";
 
 export default function Index() {
   return (
-  <section id='features' className='flex px-[2.5rem] py-[4rem]'>
+  <section id='features' className='flex px-[2.5rem] py-[4rem] bg-[black] text-white'>
     <section className='flex gap-x-24'>
     <div id='feature1' className='flex gap-x-4 items-center'>
         <div>

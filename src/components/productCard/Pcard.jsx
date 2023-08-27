@@ -6,7 +6,7 @@ import {BiSolidCartAdd} from "react-icons/bi";
 
 export default function Pcard() {
   return (
-    <section className='w-[20%] '>
+    <section className='w-[100%] '>
         <img className='w-[100%] h-[200px]' src={Product3}/>
 
         <div className='flex justify-between p-[1rem]  border rounded-b-[0.5rem]'>
