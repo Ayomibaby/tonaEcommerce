@@ -18,7 +18,7 @@ export default function NavBar() {
       };
 
   return (
-    <section className={Styles.Nav}>
+    <section className={`${Styles.Nav} border-b-[1px]`}>
         <div><h1 className={Styles.Brand}>TheTonaBrand</h1></div>
         
         <div>
