@@ -1,7 +1,14 @@
 import React from 'react'
 import Pcard from '../../productCard/Pcard'
 
+import {Products} from "../../../Data/products"
+
 export default function Preview() {
+  const designType = (prod) =>{
+    return (prod.bestSeller === true)
+}
+
+const MaleDesigns = Products?.filter(designType)
   return (
     <>
     <section className='py-[3rem] w-[100%]'>
@@ -10,11 +17,10 @@ export default function Preview() {
     </section>
     <section className='px-16 grid grid-cols-5 gap-8  mt-[2rem] w-[100%]'>
       
-        <Pcard/>
-        <Pcard/>
-        <Pcard/>
-        <Pcard/>
-        <Pcard/>
+      {MaleDesigns.map((desg)=>
+        (<Pcard product={desg}/>)
+      )}
+       
        
         
  

@@ -1,7 +1,7 @@
 import React from 'react'
 
 //assets
-import prod2 from "../../../assets/images/IMG_1827.jpg"
+import prod2 from "../../../assets/images/shoeDesigns/male/IMG_1838.jpg"
 
 //components
 import Quantity from '../../UI/quantity'

@@ -11,7 +11,7 @@ export default function Quantity() {
           <BiMinus />
         </button>
 
-        <h2>1</h2>
+        <h2 className="text-[16px]">1</h2>
         <button>
           <BiPlus  />
         </button>

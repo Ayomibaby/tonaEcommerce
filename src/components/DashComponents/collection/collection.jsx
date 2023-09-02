@@ -10,10 +10,10 @@ export default function Collection() {
 
    <section className='flex'>
 
-    <CollectionCard category="ALL"/>
-    <CollectionCard  category="MEN"/>
-    <CollectionCard  category="WOMEN"/>
-    <CollectionCard  category="UNISEX"/>
+    <CollectionCard  category="ALL" path="/shop"/>
+    <CollectionCard  category="MEN" path="/Men"/>
+    <CollectionCard  category="WOMEN" path="/Female"/>
+    <CollectionCard  category="UNISEX" path="/Unisex"/>
    
    </section>
    </section>

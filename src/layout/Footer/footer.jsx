@@ -1,8 +1,8 @@
 import React from 'react'
 import Styles from "./style.module.css"
-import {AiFillFacebook} from "react-icons/ai"
+
 export default function Footer() {
-  return (
+  return (<section className=' w-[100%]  '>
     <section className='bg-[#000023] h-[200px] p-[2rem] text-white flex justify-between'>
         <div>
         <div><h1 className={Styles.Brand}>TheTonaBrand</h1></div>
@@ -32,6 +32,11 @@ export default function Footer() {
         <div><a>Instagram</a></div>
         <div><a>Whatsapp</a></div>   
         </div>
+
     </section>
+    <section className='bg-black text-white py-[1rem] text-center'>
+    Developed by Tolulope
+  </section>
+  </section>
   )
 }

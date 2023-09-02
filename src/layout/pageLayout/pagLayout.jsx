@@ -5,12 +5,12 @@ import Footer from '../Footer/footer'
 export default function PagLayout({children}) {
   return (
     <section>
+      <div className='h-[10vh]'>
         <NavBar></NavBar>
+        </div>
         <section>{children}</section>
         <Footer></Footer>
-        <section className='bg-black text-white py-[1rem] text-center'>
-          Developed by Tolulope
-        </section>
+        
     </section>
   )
 }

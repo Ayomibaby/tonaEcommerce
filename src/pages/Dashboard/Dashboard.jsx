@@ -3,6 +3,8 @@ import Hero from "../../components/DashComponents/Hero/hero";
 import BestSellers from "../../components/DashComponents/ProductsPreview/preview";
 import Features from "../../components/DashComponents/features";
 import Collection from "../../components/DashComponents/collection/collection";
+import Modal from "../../components/modals/modal";
+import ProductDetails from "../../components/modals/ProductDetails/ProductDetails";
 
 export default function dashboard() {
   return (
@@ -22,6 +24,8 @@ export default function dashboard() {
       <section>
         <BestSellers />
       </section>
+
+      
     </>
   );
 }
