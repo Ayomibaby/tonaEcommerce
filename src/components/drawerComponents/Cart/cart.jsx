@@ -1,7 +1,11 @@
 import React from 'react'
 import CartItem from './cartItem'
+import { useSelector } from 'react-redux'
 
 export default function Cart() {
+const {cart} = useSelector((state)=>state.Cart)
+
+console.log(cart)
   return (
     <>
    <section>

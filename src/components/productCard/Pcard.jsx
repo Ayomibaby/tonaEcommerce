@@ -19,7 +19,7 @@ export default function Pcard({product}) {
         </div>
         <BiSolidCartAdd size="30px"/>
         </div>
-        {Details && (<Modal CloseModal={setDetails} message="hello"><ProductDetails></ProductDetails></Modal>)}
+        {Details && (<Modal CloseModal={setDetails} message="hello"><ProductDetails product={product}></ProductDetails></Modal>)}
     </section>
 
   )

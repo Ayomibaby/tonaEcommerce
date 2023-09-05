@@ -33,7 +33,8 @@ export const Products = [
         price:"NGN 8,000",
         stype: "female",
         bestSeller: true,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 2,
@@ -42,7 +43,8 @@ export const Products = [
         price:"NGN 10,000",
         stype: "female",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 3,
@@ -51,7 +53,8 @@ export const Products = [
         price:"NGN 12,000",
         stype: "female",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 4,
@@ -60,7 +63,8 @@ export const Products = [
         price:"NGN 10,000",
         stype: "female",
         bestSeller: true,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 5,
@@ -69,7 +73,8 @@ export const Products = [
         price:"NGN 10,000",
         stype: "female",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 6,
@@ -78,7 +83,8 @@ export const Products = [
         price:"NGN 10,000",
         stype: "female",
         bestSeller: true,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 7,
@@ -87,7 +93,8 @@ export const Products = [
         price:"NGN 15,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 8,
@@ -96,7 +103,8 @@ export const Products = [
         price:"NGN 15,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 9,
@@ -105,7 +113,8 @@ export const Products = [
         price:"NGN 15,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 10,
@@ -114,7 +123,8 @@ export const Products = [
         price:"NGN 12,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 11,
@@ -123,7 +133,8 @@ export const Products = [
         price:"NGN 10,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 12,
@@ -132,7 +143,8 @@ export const Products = [
         price:"NGN 10,000",
         stype: "male",
         bestSeller: true,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 13,
@@ -141,7 +153,8 @@ export const Products = [
         price:"NGN 13,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 14,
@@ -150,7 +163,8 @@ export const Products = [
         price:"NGN 15,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 15,
@@ -159,7 +173,8 @@ export const Products = [
         price:"NGN 15,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 16,
@@ -168,7 +183,8 @@ export const Products = [
         price:"NGN 12,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 17,
@@ -177,7 +193,8 @@ export const Products = [
         price:"NGN 15,000",
         stype: "male",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 18,
@@ -186,7 +203,8 @@ export const Products = [
         price:"NGN 10,000",
         Stype: "uni",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 19,
@@ -195,7 +213,8 @@ export const Products = [
         price:"NGN 12,000",
         Stype: "uni",
         bestSeller: true,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 20,
@@ -204,7 +223,8 @@ export const Products = [
         price:"NGN 10,000",
         Stype: "uni",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     {
         key: 21,
@@ -213,7 +233,8 @@ export const Products = [
         price:"NGN 9,000",
         Stype: "uni",
         bestSeller: false,
-        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ]
+        color: [ "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray", "white" ],
+        Sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
     },
     
     
