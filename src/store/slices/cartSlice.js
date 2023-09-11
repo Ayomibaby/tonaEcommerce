@@ -9,7 +9,12 @@ export const CartSlice = createSlice({
             state.cart.push(payload)
             console.log("done")
         },
-
+        removeItem(state,{payload}){
+            
+        },
+        clearCart(state, {payload}){
+            state.cart.length = 0
+        }
     }
 });
 

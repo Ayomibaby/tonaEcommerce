@@ -15,7 +15,7 @@ export default function Pcard({product}) {
         <div className='flex justify-between p-[1rem]  border rounded-b-[0.5rem]'>
             <div>
         <h3>{product.name} </h3>
-        <h3 className='mt-[0.5rem]'>{product.price}</h3>
+        <h3 className='mt-[0.5rem]'>NGN {product.price}</h3>
         </div>
         <BiSolidCartAdd size="30px"/>
         </div>

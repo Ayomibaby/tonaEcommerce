@@ -36,6 +36,7 @@ export default function ProductDetails({ product }) {
       color: selectedColor,
       size: selectedSize,
       quantity: selectedQuantity,
+      totalPrice: totalPrice
     };
 
     Dispatch(actions.additem(data));
@@ -48,7 +49,7 @@ export default function ProductDetails({ product }) {
       </section>
       <section>
         <h2> {product.name}</h2>
-        <h3> {product.price}</h3>
+        <h3> NGN {product.price}</h3>
 
         <h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
