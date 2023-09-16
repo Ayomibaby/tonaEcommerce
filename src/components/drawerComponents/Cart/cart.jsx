@@ -1,15 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import CartItem from "./cartItem";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { actions } from "../../../store/slices/cartSlice";
 
 export default function Cart() {
-  const { cart } = useSelector((state) => state.Cart);
+  const Dispatch = useDispatch();
 
-  console.log(cart);
+  const { cart, cartTotal } = useSelector((state) => state.Cart);
+
+useEffect(() => {
+  Dispatch(actions.sumupCart())
+
+}, [cart])
+
+
+
   return (
     <>
-      <section>
+      <section className="pb-[5rem]">
         {cart?.map((item) => (
+        
           <CartItem item={item} />
         ))}
       </section>
@@ -18,7 +28,7 @@ export default function Cart() {
           Proceed to checkout
         </button>
 
-        <h4>Total: ₦10,000 </h4>
+        <h4>Total: NGN {cartTotal}</h4>
       </section>
     </>
   );

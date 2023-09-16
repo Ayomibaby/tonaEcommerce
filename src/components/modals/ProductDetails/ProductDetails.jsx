@@ -9,13 +9,14 @@ import Quantity from "../../UI/quantity";
 //redux
 import { useDispatch } from "react-redux";
 import { actions } from "../../../store/slices/cartSlice";
+import { toast } from "react-toastify";
 
 export default function ProductDetails({ product }) {
   const Dispatch = useDispatch();
 
   //states
-  const [selectedColor, setColor] = useState();
-  const [selectedSize, setSize] = useState();
+  const [selectedColor, setColor] = useState(" ");
+  const [selectedSize, setSize] = useState(" ");
   const [selectedQuantity, setSQuantity] = useState();
 
   //functions
@@ -29,17 +30,25 @@ export default function ProductDetails({ product }) {
 
     console.log(totalPrice);
 
-    const data = {
-      name: product.name,
-      image: product.img,
-      price: product.price,
-      color: selectedColor,
-      size: selectedSize,
-      quantity: selectedQuantity,
-      totalPrice: totalPrice
-    };
+    if(!selectedColor || selectedColor == " "){
+    toast.error("Please select a color")
+    }else if (!selectedSize || selectedSize == " "){
+      toast.error("Please select a size")
+    }else{
+      const data = {
+        name: product.name,
+        image: product.img,
+        price: product.price,
+        color: selectedColor,
+        size: selectedSize,
+        quantity: selectedQuantity,
+        totalPrice: totalPrice
+      };
+  
+      Dispatch(actions.additem(data))
+      toast.success("Item added to cart")
+    }
 
-    Dispatch(actions.additem(data));
   };
 
   return (
@@ -55,7 +64,7 @@ export default function ProductDetails({ product }) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
           pretium blandit nulla, eget vehicula tellus vestibulum a. Sed eu
           tempus dolor, ut gravida dolor. Curabitur dignissim vehicula metus eu
-          dapibus.{" "}
+          dapibus.
         </h3>
         <form>
           <div className="my-[1rem]">
@@ -88,7 +97,7 @@ export default function ProductDetails({ product }) {
           <button
             type="submit"
             onClick={AddToCart}
-            className="mt-[1rem] bg-black rounded-lg py-4 w-[100%] text-white"
+            className="mt-[1rem] bg-black rounded-lg py-4 w-[100%] text-white active:opacity-50 active:bg-black"
           >
             Add to cart
           </button>

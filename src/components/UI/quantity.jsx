@@ -3,22 +3,30 @@ import React, { useState } from "react";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 
-export default function Quantity({setSQuantity}) {
+export default function Quantity({setSQuantity, quantity}) {
   const [amount, setamt] = useState(1)
   const increment = (e) =>{
     e.preventDefault();
-  setamt((amount)=>amount + 1)
+    
+   
+      setamt((amount)=>amount + 1)
+    
+  
   
   }
 
   const decrement = (e) =>{
     e.preventDefault();
-    if(amount < 2){
-      setamt(1)
-    }
-    if(amount > 1) {
-      setamt((amount)=> amount - 1)
-    }
+  
+   
+      if(amount < 2){
+        setamt(1)
+      }
+      if(amount > 1) {
+        setamt((amount)=> amount - 1)
+      }
+    
+   
   }
   setSQuantity(amount);
   return (
@@ -28,7 +36,7 @@ export default function Quantity({setSQuantity}) {
           <BiMinus />
         </button>
 
-        <h2 className="text-[16px]">{amount}</h2>
+        <h2 className="text-[16px]">{quantity ? quantity : amount}</h2>
         <button onClick={increment}>
           <BiPlus  />
         </button>

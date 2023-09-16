@@ -7,9 +7,23 @@ import All from "./pages/AllDesigns/All";
 import Men from "./pages/Men/men";
 import Female from "./pages/Female/female";
 import Unisex from "./pages/Unisex/Unisex";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
+    <>
+    <ToastContainer 
+    position="top-right"
+    autoClose={5000}
+    hideProgressBar={true}
+    newestOnTop={true}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"/>
     <BrowserRouter>
     <Routes>
 
@@ -20,6 +34,7 @@ function App() {
       <Route path="/Unisex" element={<PagLayout><Unisex/></PagLayout>}></Route>
     </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

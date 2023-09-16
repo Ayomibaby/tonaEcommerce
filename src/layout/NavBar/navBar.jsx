@@ -6,9 +6,12 @@ import { BiSearch } from "react-icons/bi";
 import { BiCart } from "react-icons/bi";
 import { Button, Drawer, Radio, Space } from 'antd';
 import Cart from '../../components/drawerComponents/Cart/cart';
+import { actions } from '../../store/slices/cartSlice';
 
 export default function NavBar() {
   const Navigate = useNavigate();
+  const Dispatch = useNavigate();
+
     const [open, setOpen] = useState(false);
     const [placement, setPlacement] = useState('right');
 
@@ -18,6 +21,12 @@ export default function NavBar() {
       const onClose = () => {
         setOpen(false);
       };
+
+      //clear cart
+      const emptyCart = () =>{
+      
+        Dispatch(actions.clearCart());
+      }
 
   return (
     <section className={`${Styles.Nav} border-b-[1px]`}>
@@ -40,7 +49,7 @@ export default function NavBar() {
             </ul>
         </div>
         <Drawer
-        title="Cart"
+        title={<div className='flex justify-between'><h3>Cart</h3> <h3 onClick={emptyCart}>Clear</h3></div>}
         placement={placement}
         closable={false}
         onClose={onClose}
