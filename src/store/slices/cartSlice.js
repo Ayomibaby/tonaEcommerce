@@ -7,7 +7,7 @@ return option.name !== payload.name
 
 export const CartSlice = createSlice({
     name:"cart",
-    initialState: {cart:[], cartTotal: null},
+    initialState: {cart:[], cartTotal: 0, },
     reducers:{
         additem(state, {payload}){
             const findItem = (item) =>{
@@ -78,7 +78,8 @@ export const CartSlice = createSlice({
            state.cartTotal = UpdatedTotal
            }
 
-        }
+        },
+       
     }
 });
 

@@ -9,6 +9,7 @@ import Female from "./pages/Female/female";
 import Unisex from "./pages/Unisex/Unisex";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Checkout from "./pages/checkout/checkout";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Route path="/Men" element={<PagLayout><Men/></PagLayout>}></Route>
       <Route path="/Female" element={<PagLayout><Female/></PagLayout>}></Route>
       <Route path="/Unisex" element={<PagLayout><Unisex/></PagLayout>}></Route>
+      <Route path="/checkout" element={<PagLayout><Checkout/></PagLayout>}></Route>
     </Routes>
     </BrowserRouter>
     </>
