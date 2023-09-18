@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { actions } from '../../../store/slices/cartSlice';
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
+import { formatNumber } from '../../../utils/formatNumbers';
 
 
 
@@ -62,7 +63,7 @@ const decrementCartItem = () =>{
       </div>
     </section>
 
-        <h3>₦{item.totalPrice}</h3>
+        <h3>₦{formatNumber(item.totalPrice, true, false)}</h3>
        
         </div>
         </section>

@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import {BiSolidCartAdd} from "react-icons/bi";
 import Modal from '../modals/modal';
 import ProductDetails from '../modals/ProductDetails/ProductDetails';
+import { TruncateString } from '../../utils/truncateSTring';
+import { formatNumber } from '../../utils/formatNumbers';
 
 
 export default function Pcard({product}) {
@@ -10,12 +12,12 @@ export default function Pcard({product}) {
 
   return (
     <section className='w-[100%] ' onClick={()=>setDetails(true)}>
-        <img className='w-[100%] h-[200px]' src={product.img}/>
+        <img className='w-[100%] h-[250px]' src={product.img}/>
 
         <div className='flex justify-between p-[1rem]  border rounded-b-[0.5rem]'>
             <div>
-        <h3>{product.name} </h3>
-        <h3 className='mt-[0.5rem]'>NGN {product.price}</h3>
+        <h3>{TruncateString(product.name)} </h3>
+        <h3 className='mt-[0.5rem]'>NGN {formatNumber(product.price, true, false)}</h3>
         </div>
         <BiSolidCartAdd size="30px"/>
         </div>

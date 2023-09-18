@@ -13,7 +13,7 @@ export default function Hero() {
   return (
 
     <section  className={Styles.main}>
-      <div data-aos="fade-up"   data-aos-easing="linear"  data-aos-duration="1000" >
+      <div data-aos="fade-up"   data-aos-easing="ease-in"  data-aos-duration="800" >
         <h1 className=''>Bespoke Leather Brand</h1>
         <button className={Styles.shop} onClick={()=>(Navigate({pathname: "/shop"}))}>Shop Now</button>
         </div>

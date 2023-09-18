@@ -13,6 +13,10 @@ export default function YourItems() {
      <h4>{itemNum} item(s)</h4>
      </div>
     <section className='overflow-y-scroll h-[60vh] '>
+      {itemNum < 1 && (<div className='text-center mt-5'>
+        <p>No items found in cart </p>
+        <a href='/' className='underline decoration-solid underline-offset-4 '>Start shopping</a>
+      </div>)}
     {cart?.map((item) => (
         
         <CartItem item={item} />

@@ -10,13 +10,14 @@ import Unisex from "./pages/Unisex/Unisex";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Checkout from "./pages/checkout/checkout";
+import Signup from "./pages/AuthPages/signup";
 
 function App() {
   return (
     <>
     <ToastContainer 
     position="top-right"
-    autoClose={5000}
+    autoClose={2000}
     hideProgressBar={true}
     newestOnTop={true}
     closeOnClick
@@ -34,6 +35,7 @@ function App() {
       <Route path="/Female" element={<PagLayout><Female/></PagLayout>}></Route>
       <Route path="/Unisex" element={<PagLayout><Unisex/></PagLayout>}></Route>
       <Route path="/checkout" element={<PagLayout><Checkout/></PagLayout>}></Route>
+      <Route path="/signup" element={<PagLayout><Signup/></PagLayout>}></Route>
     </Routes>
     </BrowserRouter>
     </>

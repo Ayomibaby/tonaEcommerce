@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-//write condition seperately 
+
 const filterByname = (option, payload) =>{
 return option.name !== payload.name
 }
 
 export const CartSlice = createSlice({
     name:"cart",
-    initialState: {cart:[], cartTotal: 0, },
+    initialState: {cart:[], cartTotal: 0, deliveryCost: 0 , deliveryInfo:false},
     reducers:{
         additem(state, {payload}){
             const findItem = (item) =>{
@@ -15,7 +15,7 @@ export const CartSlice = createSlice({
             }
            const isInCart =  state.cart.some(findItem)
 
-           console.log(isInCart)
+           
            if(!isInCart){
             state.cart.push(payload)
            }
@@ -55,30 +55,41 @@ export const CartSlice = createSlice({
                 state.cart[indextoEdit].totalPrice = updatedTotal
                }else {
                 let newCart = state.cart?.filter((option)=>(option.name !== payload))
-                    console.log(state.cart[indextoEdit].quantity)
+                   
                     state.cart = newCart
                }
            
         }, 
         sumupCart(state){
-            console.log(state.cart.length)
+            
            if(state.cart.length == 0){
             state.cartTotal = 0
            }
 
            if(state.cart.length == 1 || state.cart.length > 1){
-            // console.log("hello")
+           
             const func = (total, item)=>{
                 return total += item.totalPrice
             }
             
            const UpdatedTotal = state.cart.reduce(func, 0)
           
-           console.log(UpdatedTotal, "updated Total")
+           
            state.cartTotal = UpdatedTotal
            }
 
         },
+       
+        deliveryDetails(state, {payload}){
+            state.deliveryInfo = true 
+               
+            if(payload === "Lagos" || payload === "Ogun" || payload === "Oyo"){
+                state.deliveryCost = 2500
+            }
+            else{
+                state.deliveryCost = 4500
+            }
+        }
        
     }
 });

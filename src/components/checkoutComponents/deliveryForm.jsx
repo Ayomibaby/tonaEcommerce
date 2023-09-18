@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import InputTag from '../UI/input'
-import { Button } from 'antd'
+import NaijaStates from 'naija-state-local-government';
+import { useDispatch } from 'react-redux';
+import { actions } from '../../store/slices/cartSlice';
+
 
 export default function DeliveryForm() {
+    const [states, setstates] = useState(NaijaStates.states());
+
+    const [selectedState, setSelected ] = useState()
+
+    const dispatch = useDispatch();
+
+    const handleChange = (e) =>{
+        setSelected(e.target.value)
+        const state = e.target.value
+       
+        dispatch(actions.deliveryDetails(state))
+    }
+   
+    
   return (
     <section className='w-[100%]'>
         <h4>Delivery Information</h4>
@@ -13,8 +30,12 @@ export default function DeliveryForm() {
                 <InputTag label="Last Name" placeholder="Enter your Last name"/>
             </div>
             <div className=''>
-                
-                <InputTag label="State" placeholder="Enter your State"/>
+              
+                <label className='mt-4'>State</label>
+                <select className='w-full py-3 pl-5 mt-2 rounded-lg border border-black ' value={selectedState} onChange={handleChange}>
+                    <option>Select a state</option>
+                    {states.map((state)=>(<option value={state}>{state}</option>))}
+                </select>
                 <InputTag label="Street Address" placeholder="Enter your Street Address"/>
             </div>
             <div className=''>
@@ -22,10 +43,7 @@ export default function DeliveryForm() {
                 <InputTag label="Phone Number" placeholder="Enter your Phone Number"/>
                 <InputTag label="Email" placeholder="Enter your Email"/>
             </div>
-
-            {/* <div>
-                <Button className='w-[100%] text-white bg-black rounded-lg my-4 '>Submit</Button>
-            </div> */}
+                <button>Save Details </button>
         </form>
     </section>
   )

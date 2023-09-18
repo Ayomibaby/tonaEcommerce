@@ -2,12 +2,12 @@ import React from "react";
 import prod from "../../../assets/images/shoeDesigns/male/IMG_1838.jpg";
 import { useNavigate } from "react-router";
 
-export default function CollectionCard({ category, path }) {
+export default function CollectionCard({ category, path, image }) {
   const Navigate = useNavigate();
   return (
     <section className="p-[40px] w-[25%]">
       <div>
-        <img className="h-[250px] w-[100%]" src={prod} />
+        <img className="h-[250px] w-[100%]" src={image} />
       </div>
 
       <div>

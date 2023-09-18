@@ -67,8 +67,8 @@ export default function NavBar() {
           <li>
             <BiSearch size="30px" />
           </li>
-          <li>
-            <BiSolidUserCircle size="30px" />
+          <li onClick={()=>Navigate({pathname: "signup"})}>
+           <BiSolidUserCircle size="30px" />
           </li>
           <span className=" flex gap-x-1 items-center">
             <li onClick={showDrawer}>
@@ -96,3 +96,4 @@ export default function NavBar() {
     </section>
   );
 }
+

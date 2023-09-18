@@ -22,13 +22,10 @@ const MaleDesigns = Products?.filter(designType)
       )}
        
        
-        
  
     </section>
 
-    <section className='flex justify-center'>
-      <button className='border border-1 border-black p-2 w-[10%] mt-[24px]'>View All</button>
-    </section>
+  
     </section>
     </>
   )
