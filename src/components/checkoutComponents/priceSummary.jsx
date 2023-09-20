@@ -60,7 +60,7 @@ export default function PriceSummary() {
         </div>
         <div className="flex justify-end mt-4">
           <button
-            className="bg-black py-1 md:w-[25%] w-[100%] rounded-lg  text-white disabled:bg-[#cccccc]"
+            className="bg-black py-1 md:w-[25%] w-[100%] rounded-lg  text-white disabled:bg-[#cccccc] disabled:cursor-not-allowed"
             onClick={() => {
               setLoading(true)
               handleFlutterPayment({

@@ -75,7 +75,7 @@ export default function ProductDetails({ product }) {
             >
               <option>Color</option>
               {product.color?.map((col) => (
-                <option name="color" value={col}>
+                <option key={col} name="color" value={col}>
                   {col}
                 </option>
               ))}

@@ -34,7 +34,7 @@ export default function DeliveryForm() {
                 <label className='mt-4'>State</label>
                 <select className='w-full py-3 pl-5 mt-2 rounded-lg border border-black ' value={selectedState} onChange={handleChange}>
                     <option>Select a state</option>
-                    {states.map((state)=>(<option value={state}>{state}</option>))}
+                    {states.map((state)=>(<option key={state} value={state}>{state}</option>))}
                 </select>
                 <InputTag label="Street Address" placeholder="Enter your Street Address"/>
             </div>

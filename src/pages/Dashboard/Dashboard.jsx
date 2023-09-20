@@ -12,7 +12,7 @@ export default function Dashboard() {
  
   return (
     <>
-    <section className=" bg-[#FAF9F6]   ">
+    <section className=" bg-[#FAF9F6]  ">
       <section  className="max-w-[1600px] w-[100%] mx-auto">
         <Hero />
       </section>

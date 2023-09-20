@@ -29,12 +29,12 @@ const lengthofCart = cart.length
         {lengthofCart < 1 && (<p className="text-center">Your cart is currently empty</p>)}
         {cart?.map((item) => (
         
-          <CartItem item={item} />
+          <CartItem key={item.name} item={item} />
         ))}
       </section>
       <section className="bg-white flex justify-between items-center border-t-[1px] absolute bottom-0 pb-6 left-0 p-4 w-[100%]">
       <h3 >Total: NGN {formatNumber(cartTotal, true, false)}</h3>
-        <button className="bg-[#000023] py-[0.75rem] text-white w-[50%] rounded-lg disabled:bg-[#cccccc]" onClick={NavigateToCheckout} disabled={lengthofCart < 1 ? true : false}>
+        <button className="bg-[#000023] py-[0.75rem] text-white w-[50%] rounded-lg disabled:bg-[#cccccc] disabled:cursor-not-allowed" onClick={NavigateToCheckout} disabled={lengthofCart < 1 ? true : false}>
           Proceed to checkout
         </button>
 

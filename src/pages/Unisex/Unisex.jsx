@@ -17,7 +17,7 @@ export default function Unisex() {
         <section className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-[20px]'
         >
             {MaleDesigns.map((male)=>(
-                <Pcard product={male}/>
+                <Pcard key={male.key} product={male}/>
             ))}
             
         </section>  

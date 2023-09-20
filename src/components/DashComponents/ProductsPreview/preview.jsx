@@ -18,7 +18,7 @@ const MaleDesigns = Products?.filter(designType)
     <section className='md:px-16 px-4 grid  grid-cols-2 gap-4 md:grid-cols-5 md:gap-8  mt-[2rem] w-[100%]'>
       
       {MaleDesigns.map((desg)=>
-        (<Pcard product={desg}/>)
+        (<Pcard key={desg.key} product={desg}/>)
       )}
        
        

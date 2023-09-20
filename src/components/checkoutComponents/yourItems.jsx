@@ -19,7 +19,7 @@ export default function YourItems() {
       </div>)}
     {cart?.map((item) => (
         
-        <CartItem item={item} />
+        <CartItem key={item.name} item={item} />
       ))}
      
     </section>
