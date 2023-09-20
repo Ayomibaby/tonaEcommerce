@@ -11,13 +11,16 @@ export default function Signup() {
     const password = useRef();
 
     const [isloading , setisLoading] = useState(false)
+    const [charno, setchar] = useState(false)
 
     const Dispatch = useDispatch();
     const Navigate = useNavigate
 
+    
+
     const NewUser = (e) =>{
     e.preventDefault();
-
+      
       setisLoading(true)
        const EmailAddress = mail.current?.value;
        const userPassword = password.current?.value;
@@ -42,14 +45,20 @@ export default function Signup() {
        
        Dispatch(CreateNewUser(data)).then(({payload, error})=>{
         if(payload){
-          toast.success("account created successfully");
+          toast.success("Account created successfully");
           setisLoading(false)
           Navigate({pathname:"/"})
         }
+        
         if(error){
-          toast.error(error.message)
+        if(error.code == "auth/invalid-email"){
+          toast.error("Please enter a valid email")
+          setisLoading(false)
+        }else{
+          toast.error(error.message);
           setisLoading(false)
         }
+      }
 
        })
     }
@@ -66,7 +75,8 @@ export default function Signup() {
            
             <InputTag label="Email" placeholder="Enter email" innerRef={mail} type="false" />
 
-            <InputTag label="Password" placeholder="Enter your password" innerRef={password} type="true" />
+            <InputTag label="Password" placeholder="Enter your password" innerRef={password} type="true"  />
+            <p className='pt-2'>-Minimum of 6 characters</p>
 
             <button type='submit' className='w-full bg-black text-white py-4 rounded my-3'> Signup</button>
         </form>
