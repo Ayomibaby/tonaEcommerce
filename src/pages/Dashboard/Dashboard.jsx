@@ -12,7 +12,8 @@ export default function Dashboard() {
  
   return (
     <>
-      <section>
+    <section className="w-full">
+      <section >
         <Hero />
       </section>
 
@@ -20,15 +21,15 @@ export default function Dashboard() {
         <Collection />
       </section>
 
-      <section>
+      {/* <section>
         <Features />
-      </section>
+      </section> */}
 
       <section>
         <BestSellers />
       </section>
 
-      
+      </section>
     </>
   );
 }

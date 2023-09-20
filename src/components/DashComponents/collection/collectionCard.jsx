@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 export default function CollectionCard({ category, path, image }) {
   const Navigate = useNavigate();
   return (
-    <section className="p-[40px] w-[25%]">
+    <section className="md:p-[40px] p-[20px] md:w-[25%] w-[100%]">
       <div>
         <img className="h-[250px] w-[100%]" src={image} />
       </div>

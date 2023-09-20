@@ -12,7 +12,7 @@ export default function Collection() {
         <h2 className='text-black text-center'>OUR CATEGORIES</h2>
     </section>
 
-   <section className='flex'>
+   <section className='md:flex grid grid-cols-2'>
 
     <CollectionCard  category="ALL" path="/shop" image={all}/>
     <CollectionCard  category="MEN" path="/Men" image={masc}/>

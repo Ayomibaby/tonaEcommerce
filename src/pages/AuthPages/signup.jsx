@@ -66,6 +66,7 @@ export default function Signup() {
     const toLogin = () =>{
       Navigate({pathname:"/login"})
     }
+    
   return (
     <section className='my-[4rem] mx-auto w-[50%]  '> 
     <div >

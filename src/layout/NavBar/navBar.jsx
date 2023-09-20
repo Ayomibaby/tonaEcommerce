@@ -12,15 +12,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../config";
 import { Loguserout } from "../../store/slices/authSlice";
 
-
-
 export default function NavBar() {
   const Navigate = useNavigate();
   const Dispatch = useDispatch();
 
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState("right");
-  const [user, setuser] = useState()
+  const [user, setuser] = useState();
 
   const { cart, cartTotal } = useSelector((state) => state.Cart);
 
@@ -36,7 +34,7 @@ export default function NavBar() {
     Dispatch(actions.clearCart());
   };
 
-  const cartLength = cart.length
+  const cartLength = cart.length;
 
   // //check login status
   useEffect(() => {
@@ -56,8 +54,8 @@ export default function NavBar() {
   }, []);
 
   const userLogout = () => {
-    Dispatch(Loguserout())
-  }
+    Dispatch(Loguserout());
+  };
 
   return (
     <section className={`${Styles.Nav} border-b-[1px]`}>
@@ -69,7 +67,10 @@ export default function NavBar() {
           TheTonaBrand
         </h1>
       </div>
-
+      <section>
+        <div><p>Menu</p></div>
+      </section>
+      <section className="hidden md:contents">
       <div>
         <ul>
           <li>
@@ -92,11 +93,13 @@ export default function NavBar() {
           {/* <li>
             <BiSearch size="30px" />
           </li> */}
-          {user ? (<li onClick={userLogout}>Logout</li>) :
-         ( <li onClick={()=>Navigate({pathname: "/signup"})}>
-           <BiSolidUserCircle size="30px" />
-          </li>)
-          }
+          {user ? (
+            <li onClick={userLogout}>Logout</li>
+          ) : (
+            <li onClick={() => Navigate({ pathname: "/signup" })}>
+              <BiSolidUserCircle size="30px" />
+            </li>
+          )}
           <span className=" flex gap-x-1 items-center">
             <li onClick={showDrawer}>
               <BiCart size="30px" />
@@ -106,6 +109,8 @@ export default function NavBar() {
           </span>
         </ul>
       </div>
+      </section>
+      
       <Drawer
         title={
           <div className="flex justify-between">
@@ -123,4 +128,3 @@ export default function NavBar() {
     </section>
   );
 }
-

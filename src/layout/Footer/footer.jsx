@@ -2,14 +2,16 @@ import React from 'react'
 import Styles from "./style.module.css"
 
 export default function Footer() {
-  return (<section className=' w-[100%]  '>
-    <section className='bg-[#000023] h-[100px] p-[2rem] text-white flex justify-between'>
+  return (<section className=' '>
+    <section className=' w-[100%]  bg-[#000023]  p-[2rem] text-white md:flex md:justify-between'>
        
-        <div><h1 className={Styles.Brand}>TheTonaBrand</h1></div>
+        <div><h1 className={`${Styles.Brand} sm:text-[16px] `}>TheTonaBrand</h1></div>
+       
         <div><a>Facebook</a></div>
         <div><a>Twitter</a></div>
         <div><a>Instagram</a></div>
         <div><a>Whatsapp</a></div>
+      
        
       
         

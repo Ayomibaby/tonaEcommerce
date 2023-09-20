@@ -14,8 +14,8 @@ export default function Hero() {
 
     <section  className={Styles.main}>
       <div data-aos="fade-up"   data-aos-easing="ease-in"  data-aos-duration="800" >
-        <h1 className=''>Bespoke Leather Brand</h1>
-        <button className={Styles.shop} onClick={()=>(Navigate({pathname: "/shop"}))}>Shop Now</button>
+        <h1 className='text-[2.5rem] md:text-[3.5rem]'>Bespoke Leather Brand</h1>
+        <button className={`${Styles.shop} w-[70%] md:w-[20%] `} onClick={()=>(Navigate({pathname: "/shop"}))}>Shop Now</button>
         </div>
     </section>
   )

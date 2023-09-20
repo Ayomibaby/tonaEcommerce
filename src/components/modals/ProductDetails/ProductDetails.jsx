@@ -53,11 +53,11 @@ export default function ProductDetails({ product }) {
   };
 
   return (
-    <section className="flex gap-x-4 w-[90%] h-[100%] mx-auto">
+    <section className="md:flex md:gap-x-4 md:w-[90%] w-[98%] h-[100%] mx-auto">
       <section className="w-[100%]">
-        <img className="w-[85%] h-[80%]" src={product.img} />
+        <img className="md:w-[85%] md:h-[80%] w-[100%] h-[40%] rounded-lg mt-4 md:mt-0" src={product.img} />
       </section>
-      <section>
+      <section className="mt-8 md:mt-0">
         <h2> {product.name}</h2>
         <h3> NGN {formatNumber(product.price)}</h3>
 
@@ -70,7 +70,7 @@ export default function ProductDetails({ product }) {
         <form>
           <div className="my-[1rem]">
             <select
-              className="border border-2   rounded-lg w-[20%] mr-[1rem] p-[0.5rem] "
+              className="border border-2   rounded-lg w-[40%] md:w-[20%] mr-[1rem] p-[0.5rem] "
               onChange={(e) => setColor(e?.target?.value)}
             >
               <option>Color</option>
@@ -81,7 +81,7 @@ export default function ProductDetails({ product }) {
               ))}
             </select>
             <select
-              className="border border-2  rounded-lg w-[20%] mr-[1rem] p-[0.5rem]"
+              className="border border-2  rounded-lg w-[40%] md:w-[20%] mr-[1rem] p-[0.5rem]"
               onChange={(e) => setSize(e?.target?.value)}
             >
               <option>Sizes</option>

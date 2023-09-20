@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    position: fixed; 
+    position: sticky; 
     background-color: white;
     top: 0;
      left: 0;

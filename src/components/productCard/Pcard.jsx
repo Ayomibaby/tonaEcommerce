@@ -11,8 +11,8 @@ export default function Pcard({product}) {
   const [Details, setDetails] = useState(false) 
 
   return (
-    <section className='w-[100%] ' onClick={()=>setDetails(true)}>
-        <img className='w-[100%] h-[250px]' src={product.img}/>
+    <section className='w-[100%] cursor-pointer ' onClick={()=>setDetails(true)}>
+        <img className='w-[100%] md:h-[250px] h-[100px]' src={product.img}/>
 
         <div className='flex justify-between p-[1rem]  border rounded-b-[0.5rem]'>
             <div>
