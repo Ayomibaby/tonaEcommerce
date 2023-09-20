@@ -68,7 +68,7 @@ export default function Signup() {
     }
     
   return (
-    <section className='my-[4rem] mx-auto w-[50%]  '> 
+    <section className='my-[4rem] mx-auto md:w-[50%] w-[80%] '> 
     <div >
         <h2 className='text-center'>Sign up</h2>
 

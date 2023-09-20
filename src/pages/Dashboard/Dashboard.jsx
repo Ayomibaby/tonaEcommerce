@@ -21,9 +21,9 @@ export default function Dashboard() {
         <Collection />
       </section>
 
-      {/* <section>
+      <section>
         <Features />
-      </section> */}
+      </section>
 
       <section>
         <BestSellers />

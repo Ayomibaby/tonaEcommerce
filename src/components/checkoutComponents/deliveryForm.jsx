@@ -43,7 +43,7 @@ export default function DeliveryForm() {
                 <InputTag label="Phone Number" placeholder="Enter your Phone Number"/>
                 <InputTag label="Email" placeholder="Enter your Email"/>
             </div>
-                <button>Save Details </button>
+                {/* <button>Save Details </button> */}
         </form>
     </section>
   )

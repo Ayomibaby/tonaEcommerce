@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../config";
 import { Loguserout } from "../../store/slices/authSlice";
+import {RxHamburgerMenu} from "react-icons/rx"
 
 export default function NavBar() {
   const Navigate = useNavigate();
@@ -68,7 +69,7 @@ export default function NavBar() {
         </h1>
       </div>
       <section>
-        <div><p>Menu</p></div>
+        <div><RxHamburgerMenu/></div>
       </section>
       <section className="hidden md:contents">
       <div>

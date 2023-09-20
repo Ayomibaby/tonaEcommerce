@@ -57,7 +57,7 @@ export default function Login() {
     }
 
   return (
-    <section className='my-[4rem] mx-auto w-[50%]  '> 
+    <section className='my-[4rem] mx-auto md:w-[50%] w-[80%]  '> 
     <div >
         <h2 className='text-center'>Login</h2>
 
