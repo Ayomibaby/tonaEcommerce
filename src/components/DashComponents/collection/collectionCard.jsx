@@ -7,7 +7,7 @@ export default function CollectionCard({ category, path, image }) {
   return (
     <section className="md:p-[40px] p-[20px] md:w-[25%] w-[100%]">
       <div>
-        <img className="h-[250px] w-[100%]" src={image} />
+        <img className="md:h-[250px] h-[150px]  w-[100%]" src={image} />
       </div>
 
       <div>

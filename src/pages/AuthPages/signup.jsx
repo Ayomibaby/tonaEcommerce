@@ -14,7 +14,7 @@ export default function Signup() {
     const [charno, setchar] = useState(false)
 
     const Dispatch = useDispatch();
-    const Navigate = useNavigate
+    const Navigate = useNavigate();
 
     
 
@@ -68,7 +68,7 @@ export default function Signup() {
     }
     
   return (
-    <section className='my-[4rem] mx-auto md:w-[50%] w-[80%] '> 
+    <section className='my-[6rem] mx-auto md:w-[50%] w-[80%] '> 
     <div >
         <h2 className='text-center'>Sign up</h2>
 
@@ -83,7 +83,7 @@ export default function Signup() {
         </form>
 
         <div>
-          <p className='text-right' onClick={()=>{Navigate({pathname: "/login"})}}>Already have an account? <span  >Login</span></p>
+          <p className='text-right' onClick={toLogin}>Already have an account? <span  >Login</span></p>
         </div>
         </div>
     </section>

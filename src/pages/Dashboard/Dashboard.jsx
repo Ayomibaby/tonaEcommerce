@@ -12,20 +12,20 @@ export default function Dashboard() {
  
   return (
     <>
-    <section className="w-full">
-      <section >
+    <section className=" bg-[#FAF9F6]   ">
+      <section  className="max-w-[1600px] w-[100%] mx-auto">
         <Hero />
       </section>
 
-      <section>
+      <section  className="w-[100%] mx-auto max-w-[1600px]">
         <Collection />
       </section>
 
-      <section>
+      <section className="w-[100%] mx-auto max-w-[1600px]">
         <Features />
       </section>
 
-      <section>
+      <section className="w-[100%] mx-auto  max-w-[1600px]">
         <BestSellers />
       </section>
 

@@ -14,7 +14,7 @@ export default function Pcard({product}) {
     <section className='w-[100%]  cursor-pointer ' onClick={()=>setDetails(true)}>
         <img className='w-[100%] md:h-[250px] h-[100px]' src={product.img}/>
 
-        <div className='flex justify-between p-[1rem] h-[150px] border rounded-b-[0.5rem]'>
+        <div className='flex justify-between p-[1rem] h-[100px]  border rounded-b-[0.5rem]'>
             <div>
         <h3>{TruncateString(product.name)} </h3>
         <h3 className='mt-[0.5rem]'>NGN {formatNumber(product.price, true, false)}</h3>

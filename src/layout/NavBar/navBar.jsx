@@ -5,6 +5,7 @@ import { BiSolidUserCircle } from "react-icons/bi";
 import { BiSearch } from "react-icons/bi";
 import { BiCart } from "react-icons/bi";
 import {BiXCircle} from "react-icons/bi";
+import {BiArrowBack} from "react-icons/bi"
 import { Button, Drawer, Radio, Space } from "antd";
 import Cart from "../../components/drawerComponents/Cart/cart";
 import { actions } from "../../store/slices/cartSlice";
@@ -130,8 +131,9 @@ export default function NavBar() {
       </section>
       <Drawer
         title={
-          <div className="flex justify-between">
-            <h3>Cart</h3> <h3 onClick={emptyCart}>Clear</h3>
+          <div className="flex justify-between items-center">
+            <div className="cursor-pointer" onClick={onClose}><BiArrowBack/></div>
+            <h3>Cart</h3> <h3 onClick={emptyCart} className="cursor-pointer">Clear</h3>
           </div>
         }
         placement={placement}
@@ -151,7 +153,7 @@ export default function NavBar() {
         key={menuPlacement}
         
       >
-        <Index/>
+        <Index close={closeMenu}/>
       </Drawer>
     </section>
   );

@@ -5,7 +5,7 @@ import Footer from "../Footer/footer";
 export default function PagLayout({ children }) {
   return (
     <section>
-      <div className="h-[10vh]">
+      <div className="">
         <NavBar></NavBar>
       </div>
       <section >{children}</section>

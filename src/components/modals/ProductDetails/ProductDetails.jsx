@@ -55,7 +55,7 @@ export default function ProductDetails({ product }) {
   return (
     <section className="md:flex md:gap-x-4 md:w-[90%] w-[98%] h-[100%] mx-auto">
       <section className="w-[100%]">
-        <img className="md:w-[85%] md:h-[80%] w-[100%] h-[40%] rounded-lg mt-4 md:mt-0" src={product.img} />
+        <img className="md:w-[85%] md:h-[80%] w-[100%] h-[250px] rounded-lg mt-4 md:mt-0" src={product.img} />
       </section>
       <section className="mt-8 md:mt-0">
         <h2> {product.name}</h2>

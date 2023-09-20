@@ -1,31 +1,87 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router";
 
-export default function Index() {
+export default function Index({ close }) {
+  const Navigate = useNavigate();
   return (
-    <section className='bg-[#FAF9F6] '>
-         {/* <ul>
-          <li>
-            <a href="/Men">MEN</a>
-          </li>
-          <li>
-            <a href="/Female">WOMEN</a>
-          </li>
-          <li>
-            <a href="/Unisex">UNISEX</a>
-          </li>
-         
-        </ul> */}
-       
-        <p className='mb-[1.5rem]'> <a href="/Men">MEN</a></p>
-        <hr></hr>
-        <p className='my-[1.5rem]'> <a href="/Female">WOMEN</a></p>
-        <hr/>
-        <p className='my-[1.5rem]'> <a href="/Unisex">UNISEX</a></p>
-        <hr/>
-        <p className='my-[1.5rem]'> <a href="/signup">SIGNUP</a></p>
-        <hr/>
-        <p className='my-[1.5rem]'> <a href="/login">LOGIN</a></p>
-        <hr/>
+    <section className="bg-[#FAF9F6] ">
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/");
+          close();
+        }}
+      >
+        {" "}
+        HOME
+      </p>
+      <hr></hr>
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/Shop");
+          close();
+        }}
+      >
+        {" "}
+        All
+      </p>
+      <hr></hr>
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/Men");
+          close();
+        }}
+      >
+        {" "}
+        MEN
+      </p>
+      <hr></hr>
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/Female");
+          close();
+        }}
+      >
+        {" "}
+        WOMEN
+      </p>
+      <hr />
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/Unisex");
+          close();
+        }}
+      >
+        {" "}
+        UNISEX
+      </p>
+      <hr />
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/signup");
+          close();
+        }}
+      >
+        {" "}
+        SIGNUP
+      </p>
+      <hr />
+      <p
+        className="my-[1.5rem]"
+        onClick={() => {
+          Navigate("/login");
+          close();
+        }}
+      >
+        {" "}
+        LOGIN
+      </p>
+      <hr />
     </section>
-  )
+  );
 }
