@@ -3,6 +3,8 @@ import InputTag from '../../components/UI/input'
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { CreateNewUser } from '../../store/slices/authSlice';
+import { useNavigate } from 'react-router';
+import Cliploader from "react-spinners/ClipLoader"
 
 export default function Signup() {
     const mail = useRef();
@@ -11,6 +13,7 @@ export default function Signup() {
     const [isloading , setisLoading] = useState(false)
 
     const Dispatch = useDispatch();
+    const Navigate = useNavigate
 
     const NewUser = (e) =>{
     e.preventDefault();
@@ -32,10 +35,28 @@ export default function Signup() {
         toast.error("please enter your password")
         setisLoading(false)
        }
+       if(userPassword.length < 6){
+        toast.error("Password has to be longer than 6 characters")
+        setisLoading(false)
+       }
        
-       Dispatch(CreateNewUser(data))
+       Dispatch(CreateNewUser(data)).then(({payload, error})=>{
+        if(payload){
+          toast.success("account created successfully");
+          setisLoading(false)
+          Navigate({pathname:"/"})
+        }
+        if(error){
+          toast.error(error.message)
+          setisLoading(false)
+        }
+
+       })
     }
     
+    const toLogin = () =>{
+      Navigate({pathname:"/login"})
+    }
   return (
     <section className='my-[4rem] mx-auto w-[50%]  '> 
     <div >
@@ -51,7 +72,7 @@ export default function Signup() {
         </form>
 
         <div>
-          <p className='text-right'>Already have an account? <span>Login</span></p>
+          <p className='text-right' onClick={()=>{Navigate({pathname: "/login"})}}>Already have an account? <span  >Login</span></p>
         </div>
         </div>
     </section>

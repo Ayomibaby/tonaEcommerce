@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Checkout from "./pages/checkout/checkout";
 import Signup from "./pages/AuthPages/signup";
+import Login from "./pages/AuthPages/Login";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path="/Unisex" element={<PagLayout><Unisex/></PagLayout>}></Route>
       <Route path="/checkout" element={<PagLayout><Checkout/></PagLayout>}></Route>
       <Route path="/signup" element={<PagLayout><Signup/></PagLayout>}></Route>
+      <Route path="/login" element={<PagLayout><Login/></PagLayout>}></Route>
     </Routes>
     </BrowserRouter>
     </>
