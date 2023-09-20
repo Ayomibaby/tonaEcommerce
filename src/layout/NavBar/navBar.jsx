@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { BiSearch } from "react-icons/bi";
 import { BiCart } from "react-icons/bi";
+import {BiXCircle} from "react-icons/bi";
 import { Button, Drawer, Radio, Space } from "antd";
 import Cart from "../../components/drawerComponents/Cart/cart";
 import { actions } from "../../store/slices/cartSlice";
@@ -12,13 +13,16 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../config";
 import { Loguserout } from "../../store/slices/authSlice";
 import {RxHamburgerMenu} from "react-icons/rx"
+import Index from "../../components/drawerComponents/mobileNavMenu";
 
 export default function NavBar() {
   const Navigate = useNavigate();
   const Dispatch = useDispatch();
 
   const [open, setOpen] = useState(false);
+  const [openMenu, setMenu] = useState(false)
   const [placement, setPlacement] = useState("right");
+  const [menuPlacement, setmenuplace] = useState("left")
   const [user, setuser] = useState();
 
   const { cart, cartTotal } = useSelector((state) => state.Cart);
@@ -29,6 +33,14 @@ export default function NavBar() {
   const onClose = () => {
     setOpen(false);
   };
+
+  const showMenu = () =>{
+    setMenu(true)
+  }
+
+  const closeMenu = () =>{
+    setMenu(false)
+  }
 
   //clear cart
   const emptyCart = () => {
@@ -59,20 +71,24 @@ export default function NavBar() {
   };
 
   return (
-    <section className={`${Styles.Nav} border-b-[1px]`}>
+    <section className={`${Styles.Nav} border-b-[1px] `}>
+      <section className="w-[90%] mx-auto flex justify-between items-center">
+
+      <section className="md:hidden">
+        <div onClick={showMenu}><RxHamburgerMenu/></div>
+      </section>
+
       <div>
         <h1
-          className={Styles.Brand}
+          className={`${Styles.Brand} `}
           onClick={() => Navigate({ pathname: "/" })}
         >
           TheTonaBrand
         </h1>
       </div>
-      <section>
-        <div><RxHamburgerMenu/></div>
-      </section>
-      <section className="hidden md:contents">
-      <div>
+     
+      
+      <div className="md:contents hidden">
         <ul>
           <li>
             <a href="/Men">MEN</a>
@@ -89,11 +105,9 @@ export default function NavBar() {
         </ul>
       </div>
 
-      <div>
+      <div >
         <ul>
-          {/* <li>
-            <BiSearch size="30px" />
-          </li> */}
+         <div className="md:contents hidden">
           {user ? (
             <li onClick={userLogout}>Logout</li>
           ) : (
@@ -101,17 +115,19 @@ export default function NavBar() {
               <BiSolidUserCircle size="30px" />
             </li>
           )}
-          <span className=" flex gap-x-1 items-center">
+          </div>
+
+          <div className=" flex gap-x-1 items-center">
             <li onClick={showDrawer}>
               <BiCart size="30px" />
             </li>
 
             <li>{cartLength}</li>
-          </span>
-        </ul>
+          </div>
+          </ul>
       </div>
-      </section>
       
+      </section>
       <Drawer
         title={
           <div className="flex justify-between">
@@ -125,6 +141,17 @@ export default function NavBar() {
         key={placement}
       >
         <Cart close={onClose} />
+      </Drawer>
+      <Drawer
+        title={<div className="flex justify-between"><p>MENU</p>  <div ><BiXCircle size="25px" onClick={closeMenu}/></div> </div>}
+        placement={menuPlacement}
+        closable={false}
+        onClose={closeMenu}
+        open={openMenu}
+        key={menuPlacement}
+        
+      >
+        <Index/>
       </Drawer>
     </section>
   );

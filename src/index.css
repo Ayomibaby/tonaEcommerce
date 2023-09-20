@@ -36,3 +36,19 @@ h2{
   body{
     width: 100%;
   }
+
+  .ant-drawer-header {
+    background-color: #FAF9F6;
+    
+  }
+  
+  .ant-drawer-title {
+    color: #fff;
+  }
+  
+  .ant-drawer-body {
+    background-color: #FAF9F6;
+    color: black;
+    height: calc(100vh - 55px);
+   
+  }
