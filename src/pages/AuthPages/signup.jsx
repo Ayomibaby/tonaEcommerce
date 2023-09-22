@@ -83,7 +83,7 @@ export default function Signup() {
         </form>
 
         <div>
-          <p className='text-right' onClick={toLogin}>Already have an account? <span  >Login</span></p>
+          <p className='text-right' >Already have an account? <span className='cursor-pointer' onClick={toLogin} >Login</span></p>
         </div>
         </div>
     </section>

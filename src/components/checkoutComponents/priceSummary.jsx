@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 import { ClipLoader } from "react-spinners";
 import { formatNumber } from "../../utils/formatNumbers";
+import { actions } from "../../store/slices/cartSlice";
 
 export default function PriceSummary() {
   const Navigate = useNavigate();
 
+  const Dispatch = useDispatch()
+
   const { cart, cartTotal, deliveryCost } = useSelector((state) => state.Cart);
+
+
 
   let totalOrder = cartTotal + deliveryCost;
 
@@ -36,10 +41,11 @@ export default function PriceSummary() {
   };
 
   const finalizeWalletProcess = (response) => {
-    toast.success("payment made successfully");
+    Dispatch(actions.clearCart())
     setLoading(false)
     Navigate({ pathname: "/" })
-    cart = [] //clear cart
+    toast.success("payment made successfully");
+    
   };
   const handleFlutterPayment = useFlutterwave(config);
 
